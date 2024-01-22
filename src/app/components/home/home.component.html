@@ -1,0 +1,11 @@
+<section class="container justify-content-center">
+  <h3 class="spt-ctg">Support categories</h3>
+  <div *ngIf="tiles.length > 0" class="tiles-container d-flex flex-wrap justify-content-between">
+    <mat-card *ngFor="let tile of tiles; let i = index"
+      (click)="navigateToDetail(tile.tab_identifier)"
+      [ngClass]="{'tile-width-50': tiles.length === 1, 'tile-width-48': tiles.length === 2 && i < 2, 'tile-width-30': tiles.length === 3 && i < 3}"
+      class="py-3  justify-content-center align-items-center text-center cursor">
+      <p class="mt-2 m-0 mx-3 my-3 app-name">{{tile.headerText}}</p>
+    </mat-card>
+  </div>
+</section>

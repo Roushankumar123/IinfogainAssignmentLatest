@@ -1,0 +1,38 @@
+.spt-ctg{
+  font-size: 1.5rem;
+  @media (max-width: 575.98px) {
+    font-size: 0.875rem;
+  }
+}
+.tiles-container {
+  box-sizing: border-box;
+  padding: 0 5px;
+  .app-name{
+    font-size: 1.125rem; 
+    @media (max-width: 575.98px) {
+      font-size: 1rem;
+    }
+  }
+  .tile-width-50 {
+    width: 50%;
+  }
+  
+  .tile-width-48 {
+    width: 48%;
+   
+  }
+  
+  .tile-width-30 {
+    width: 30%;
+  }
+  
+  @media (max-width: 767px) {
+    .tile-width-48,
+    .tile-width-30 {
+      width: 48%; 
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+}

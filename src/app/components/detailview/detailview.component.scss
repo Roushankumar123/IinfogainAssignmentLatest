@@ -1,0 +1,80 @@
+section {
+    .suport-ctg,
+    .mobileheader,
+    .card__tag {
+      font-size: 0.75rem;
+      color: var(--r-text-dark);
+    }
+  
+    .recmd-solution {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--r-text-dark);
+    }
+  
+    .activetab {
+      font-size: 1.5rem;
+      color: var(--text-active);
+    }
+  
+    .circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--btn-color);
+      margin-top: 7px;
+    }
+  
+    .nonactivetabl {
+      font-size: 1.5rem;
+      color: var(--text-nav);
+    }
+  
+    .mobileheader {
+      font-size: 0.875rem;
+      color: var(--text-active);
+    }
+  
+    @media (max-width: 575.98px) {
+      .card__title {
+        font-size: 1.25rem;
+      }
+  
+      .btn {
+        font-size: 1rem;
+      }
+    }
+  
+    ::ng-deep {
+      .card__title {
+        margin-top: 15px;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: var(--r-text-dark);
+      }
+  
+      .card__content {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: var(--r-text-dark);
+      }
+  
+      .card {
+        margin-top: 20px;
+        padding: 20px 20px 20px 40px;
+        box-shadow: 0px 1px 4px 1px var(--box-shadow);
+        border-radius: 16px;
+      }
+  
+      .btn {
+        background-color: var(--btn-color);
+        color: var(--white-color);
+        border-radius: 8px;
+      }
+  
+      a {
+        color: var(--btn-color);
+      }
+    }
+  }
+  

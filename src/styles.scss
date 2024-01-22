@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root{
+   --text-dark:#404040;
+   --text-active:#212121;
+   --btn-color:#0278ab;
+   --text-nav:#737373;
+   --white-color:#ffff;
+   --box-shadow:rgba(33, 33, 33, 0.2);
+}
+
+
+ul {
+   margin: 0;
+   padding: 0;
+ }
+ ul li {
+   list-style: none;
+ }
+
+.cursor {
+   cursor: pointer;
+}

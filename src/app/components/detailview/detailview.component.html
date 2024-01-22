@@ -1,0 +1,50 @@
+<!-- Details Page -->
+<section class="container d-flex flex-column flex-md-row gap-1 gap-md-5">
+  <nav class="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
+    <h4 class="suport-ctg mx-3 mt-3 cursor" [routerLink]="['/']">
+      &lt; Support categories
+    </h4>
+    <ul *ngFor="let data of dataValue" class="mt-3 d-flex">
+      <li
+        [ngClass]="
+          data?.tab_identifier === this.tabIdentifier
+            ? 'activetab'
+            : 'nonactivetabl'
+        "
+        class="text-nowrap cursor"
+        (click)="detialsViewChange(data?.tab_identifier)"
+      >
+        {{ data?.headerText }}
+      </li>
+      <span
+        class="mx-2 mt-2"
+        [ngClass]="data?.tab_identifier === this.tabIdentifier ? 'circle' : ' '"
+      ></span>
+    </ul>
+  </nav>
+
+  <nav class="d-md-none">
+    <h4 class="suport-ctg mx-3 mt-md-3 m-0 mt-0" [routerLink]="['/']">
+      &lt; Support categories
+    </h4>
+    <h4 class="mx-3 mobileheader m-0">{{ tabData?.headerText }}</h4>
+  </nav>
+  <!-- main page -->
+  <main>
+    <h3 class="mx-3 recmd-solution mt-md-3 m-0 mt-0">Recommended solution</h3>
+    <div class="d-flex flex-column">
+      <div
+        *ngFor="let data of finalData?.contentbox_Data; let i = index"
+        [ngClass]="
+          'order-' +
+          (data['contentbox' + (i + 1) + '_Data']
+            ? data?.positionDataItem['contentbox' + (i + 1) + '_Position']
+            : 'default-class')
+        "
+        [innerHtml]="data['contentbox' + (i + 1) + '_Data']"
+      ></div>
+    </div>
+  </main>
+  <!-- main page -->
+</section>
+<!-- Details Page -->
